@@ -3,12 +3,10 @@
 }
 
 :root {
-    font-size: 20px;
-
     /* colors */
     --clr-header: #2e323f;
     --clr-primary: #3b4050;
-    --clr-secondary: #e7e4da;
+    --clr-secondary: #faf8ef;
     --clr-accent: #a59678;
     --clr-fonts-light: #fff;
 
@@ -20,6 +18,7 @@
 body {
     margin: 0;
     line-height: 1.5;
+    font-family: var(--ff-regular);
 }
 
 h1,
@@ -78,6 +77,7 @@ header {
     background-color: var(--clr-header);
     color: white;
     text-align: center;
+    font-size: 1.125rem;
 }
 
 header .container {
@@ -121,37 +121,141 @@ nav.hidden {
 }
 
 
-
+/* hero section */
 .hero, footer {
     background-color: var(--clr-primary);
     color: var(--clr-fonts-light);
 }
 
-.hero__title span {
+.hero__text h1 {
+    font-size: 2rem;
+}
+
+.hero__text span {
     color: var(--clr-accent)
 }
 
 .hero__description .btn {
     display: inline-block;
-    margin-block: 1em;
-
+    margin-block: 0.5rem;
+    font-size: 1.125rem;
 }
 
-section.section-two {
+
+/* section two */
+.section-two {
     background-color: var(--clr-secondary);
 }
 
+.section-two h2 {
+    color: var(--clr-accent);
+}
+
+
+/* main */
+.main__section-one  h2{
+    color: var(--clr-accent);
+    font-size: 1.75rem;
+}
+
+.main__section-two {
+    gap: 1em;
+    color: var(--clr-fonts-light);
+    text-align: center;
+}
+
+.main__section-two__card {
+    background-color: var(--clr-primary);
+    padding: 1em 3em;
+}
+
+
+/* footer */
+footer .footer__title {
+    font-size: 1.75rem;
+}
+
+.footer__details {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer__detail h3 {
+    color: var(--clr-accent);
+    font-size: 1.25rem;
+}
 
 
 
+/* MEDIA QUERIES */
+/* For screen size greater than 600px */
 
+@media (min-width: 700px) {
+    
+    .row {
+        flex-direction: row;
+        gap: 0.5em;
+    }
+    
+    /* header */
+    .hamburger {
+        display: none;
+    }
 
+    .header__logo {
+        float: left;
+        /* margin-right: 2rem; */
+    }
 
+    nav.hidden {
+        display: flex;
+        justify-content: end;
+        gap: 2em;
+    }
 
+    .nav__lists {
+        margin-block: 0;
+        gap: 2em;
+    }
+    
+    .nav__items {
+        margin-top: 0;
+    }
+    
+    .primary-list {
+        margin-block: 0;
+    }
+    
+    .secondary-list li:last-child {
+        margin: 0;
+    }
 
+    .hero__text {
+        gap: 1.5em;
+    }
 
+    .hero__text h1 {
+        margin: 0;
+        font-size: 2.25rem;
+    }
+    
 
+    /* main */
+    main > .row {
+        flex-wrap: wrap;
+    }
+    
+    .main__section-two {
+        display: flex;
 
-/* @media (min-width: 700px) {
+    }
+    
+    .main__section-two__card {
+        padding: 1em 1.5em;
+    }
 
-} */
+    .main__section-two__card h2 {
+        font-size: 1.35rem;
+    }
+    
+}
