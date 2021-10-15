@@ -127,7 +127,15 @@ nav.hidden {
     color: var(--clr-fonts-light);
 }
 
+.hero__title span {
+    color: var(--clr-accent)
+}
 
+.hero__description .btn {
+    display: inline-block;
+    margin-block: 1em;
+
+}
 
 section.section-two {
     background-color: var(--clr-secondary);
