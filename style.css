@@ -25,8 +25,8 @@ body {
 h1,
 h2,
 h3 {
-    margin: 0;
     font-family: var(--ff-bold);
+    margin-bottom: 0;
     line-height: 1.1;
 }
 
@@ -41,8 +41,8 @@ a {
     color: unset;
 }
 
-a:hover, 
-a:focus {
+a:hover,
+a:active {
     opacity: 0.7;
 }
 
@@ -92,6 +92,10 @@ header .container {
 }
 
 .hamburger:hover {
+    opacity: 0.7;
+}
+
+.hamburger-active {
     opacity: 0.5;
 }
 
@@ -101,10 +105,15 @@ nav.hidden {
 
 .nav__lists {
     margin-block: 0.5em;
+    gap: 0.5em;
 }
 
 .nav__items {
     margin-top: 0.2em;
+}
+
+.primary-list {
+    margin-block: 1.5em;
 }
 
 .secondary-list li:last-child {
