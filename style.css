@@ -67,7 +67,9 @@ img {
 }
 
 .container {
-    padding: 2.5rem 5%;
+    padding: 2.5rem min(8%, 5rem);
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 
@@ -81,7 +83,7 @@ header {
 }
 
 header .container {
-    padding: 1rem 5%;
+    padding-block: 1rem;
 }
 
 .hamburger {
@@ -155,7 +157,6 @@ nav.hidden {
 /* main */
 .main__section-one  h2{
     color: var(--clr-accent);
-    font-size: 1.75rem;
 }
 
 .main__section-two {
@@ -172,6 +173,7 @@ nav.hidden {
 
 /* footer */
 footer .footer__title {
+    text-align: center;
     font-size: 1.75rem;
 }
 
@@ -182,14 +184,13 @@ footer .footer__title {
 
 .footer__detail h3 {
     color: var(--clr-accent);
-    font-size: 1.25rem;
+    font-size: 1.35rem;
 }
 
 
 
 /* MEDIA QUERIES */
 /* For screen size greater than 600px */
-
 @media (min-width: 700px) {
     
     .row {
@@ -197,6 +198,7 @@ footer .footer__title {
         gap: 0.5em;
     }
     
+
     /* header */
     .hamburger {
         display: none;
@@ -204,7 +206,6 @@ footer .footer__title {
 
     .header__logo {
         float: left;
-        /* margin-right: 2rem; */
     }
 
     nav.hidden {
@@ -222,16 +223,15 @@ footer .footer__title {
         margin-top: 0;
     }
     
-    .primary-list {
-        margin-block: 0;
-    }
-    
     .secondary-list li:last-child {
         margin: 0;
     }
 
+
+    /* hero */
     .hero__text {
         gap: 1.5em;
+        align-items: center;
     }
 
     .hero__text h1 {
@@ -247,7 +247,6 @@ footer .footer__title {
     
     .main__section-two {
         display: flex;
-
     }
     
     .main__section-two__card {
@@ -258,4 +257,87 @@ footer .footer__title {
         font-size: 1.35rem;
     }
     
+}
+
+
+/* For screen size greater than 1000px */
+@media (min-width: 1000px) {
+    
+    body {
+        font-size: 1.25rem;
+    }
+
+    .row {
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .container {
+        padding-block: 5rem;
+    }
+
+    
+    /* navbar */
+    nav.hidden {
+        gap: 5em;
+    }
+
+
+    /* hero */
+    .hero .container {
+        padding-block: 8rem;
+    }
+
+    .hero__description .btn {
+        font-size: 1.35rem;
+    }
+
+    .hero__text {
+        gap: 2.5em;
+    }
+
+    .hero__text h1 {
+        font-size: 3.5rem;
+    }
+
+    
+    /* main */
+    main > .row {
+        flex-wrap: nowrap;
+    }
+    
+    .main__section-one {
+        width: 60%;
+    } 
+
+    .main__section-two {
+        flex-wrap: wrap;
+        width: 30%;
+    }
+    
+    .main__section-two__card {
+        padding: 1em 1.5em;
+        height: max-content;
+    }
+
+    .main__section-two__card h2 {
+        font-size: 1.35rem;
+    }
+
+    
+    /* footer */
+    footer .footer__title {
+        font-size: 2.5rem;
+        margin-bottom: 1em;
+    }
+    
+    .footer__details {
+        flex-direction: row;
+        gap: 3rem;
+        flex-wrap: nowrap;
+    }
+
+    .footer__detail + .footer__detail {
+        width: 30%;
+    }
 }
